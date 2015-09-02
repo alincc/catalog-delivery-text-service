@@ -20,19 +20,12 @@
         <docker.image.prefix>example</docker.image.prefix>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>1.0.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
@@ -70,6 +63,10 @@
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+        </dependency>
+        <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
         </dependency>
@@ -82,6 +79,11 @@
             <groupId>no.nb.microservices.catalogdeliverytext</groupId>
             <artifactId>catalog-delivery-text-service-model</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>no.nb.microservices</groupId>
+            <artifactId>catalog-metadata-model</artifactId>
+            <version>0.0.1-cc221af5214dd323e8b5b6b138d33cf89c0b4698-88</version>
         </dependency>
 
         <!-- Testing -->
@@ -104,12 +106,6 @@
             <groupId>com.squareup.okhttp</groupId>
             <artifactId>mockwebserver</artifactId>
             <version>2.4.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

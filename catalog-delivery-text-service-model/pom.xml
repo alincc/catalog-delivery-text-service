@@ -17,4 +17,32 @@
             <artifactId>spring-boot-starter-hateoas</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <extension>true</extension>
+                            <schemaIncludes>
+                                <schemaInclude>**/*.xsd</schemaInclude>
+                            </schemaIncludes>
+                            <bindingDirectory>src/main/resources/xsd</bindingDirectory>
+                            <bindingIncludes>
+                                <bindingInclude>**/*.xjb</bindingInclude>
+                            </bindingIncludes>
+                            <strict>false</strict>
+                            <generatePackage>no.nb.microservices.catalogdeliverytext.model.alto</generatePackage>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

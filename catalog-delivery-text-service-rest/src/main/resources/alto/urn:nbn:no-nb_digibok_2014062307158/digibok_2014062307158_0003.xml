@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.ccs-gmbh.com/metae/alto-1-2.xsd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<Description>
+		<MeasurementUnit>mm10</MeasurementUnit>
+		<sourceImageInformation>
+			<fileName>//Produksjon5.nb.no/ocr-output/Monografi_Default_Antiqua_Auto/digibok_2014062307158/images/digibok_2014062307158_0003.tif</fileName>
+		</sourceImageInformation>
+		<OCRProcessing ID="OCRPROCESSING_1">
+			<preProcessingStep>
+				<processingSoftware>
+					<softwareCreator>CCS Content Conversion Specialists GmbH, Germany</softwareCreator>
+					<softwareName>CCS docWORKS</softwareName>
+					<softwareVersion>6.6-2.5</softwareVersion>
+				</processingSoftware>
+			</preProcessingStep>
+			<ocrProcessingStep>
+				<processingSoftware>
+					<softwareCreator>ABBYY (BIT Software), Russia</softwareCreator>
+					<softwareName>FineReader</softwareName>
+					<softwareVersion>8.1</softwareVersion>
+				</processingSoftware>
+			</ocrProcessingStep>
+		</OCRProcessing>
+	</Description>
+	<Styles>
+		<TextStyle ID="TXT_0" FONTSIZE="8" FONTFAMILY="Times New Roman" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_1" FONTSIZE="10" FONTFAMILY="Arial" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_2" FONTSIZE="8" FONTFAMILY="Arial"/>
+		<TextStyle ID="TXT_3" FONTSIZE="13" FONTFAMILY="Times New Roman" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_4" FONTSIZE="10" FONTFAMILY="Times New Roman"/>
+		<TextStyle ID="TXT_5" FONTSIZE="16" FONTFAMILY="Times New Roman" FONTSTYLE="bold italics"/>
+		<TextStyle ID="TXT_6" FONTSIZE="10" FONTFAMILY="Times New Roman" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_7" FONTSIZE="8" FONTFAMILY="Arial" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_8" FONTSIZE="5" FONTFAMILY="Arial" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_9" FONTSIZE="12" FONTFAMILY="Times New Roman" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_10" FONTSIZE="9" FONTFAMILY="Times New Roman" FONTSTYLE="bold"/>
+		<TextStyle ID="TXT_11" FONTSIZE="7" FONTFAMILY="Times New Roman" FONTSTYLE="bold underline"/>
+		<ParagraphStyle ID="PAR_LEFT" ALIGN="Left"/>
+	</Styles>
+	<Layout>
+		<Page ID="P3" PHYSICAL_IMG_NR="3" HEIGHT="2576" WIDTH="1510" PC="0.296">
+			<TopMargin ID="P3_TM00001" HPOS="0" VPOS="0" WIDTH="4032" HEIGHT="0"/>
+			<LeftMargin ID="P3_LM00001" HPOS="0" VPOS="0" WIDTH="0" HEIGHT="6868"/>
+			<RightMargin ID="P3_RM00001" HPOS="4030" VPOS="0" WIDTH="2" HEIGHT="6868"/>
+			<BottomMargin ID="P3_BM00001" HPOS="0" VPOS="6868" WIDTH="4032" HEIGHT="2"/>
+			<PrintSpace ID="P3_PS00001" HPOS="0" VPOS="0" WIDTH="4030" HEIGHT="6868">
+				<TextBlock ID="P3_TB00001" HPOS="3031" VPOS="566" WIDTH="120" HEIGHT="35" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00001" HPOS="1137" VPOS="212" WIDTH="45" HEIGHT="13">
+						<String ID="P3_ST00001" HPOS="1137" VPOS="212" WIDTH="45" HEIGHT="13" CONTENT="HUI" WC="0.91" CC="868"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00002" HPOS="2953" VPOS="901" WIDTH="32" HEIGHT="52" STYLEREFS="TXT_1 PAR_LEFT">
+					<TextLine ID="P3_TL00002" HPOS="1107" VPOS="338" WIDTH="13" HEIGHT="20">
+						<String ID="P3_ST00002" HPOS="1107" VPOS="338" WIDTH="13" HEIGHT="20" CONTENT="fl" WC="0.25" CC="77"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00003" HPOS="2455" VPOS="1036" WIDTH="273" HEIGHT="32" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00003" HPOS="921" VPOS="389" WIDTH="102" HEIGHT="12">
+						<String ID="P3_ST00003" HPOS="921" VPOS="389" WIDTH="102" HEIGHT="12" CONTENT="fflftihim" WC="0.30" CC="777770878"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00004" HPOS="1021" VPOS="1138" WIDTH="440" HEIGHT="340"/>
+				<TextBlock ID="P3_TB00005" HPOS="2780" VPOS="1151" WIDTH="22" HEIGHT="36" STYLEREFS="TXT_3 PAR_LEFT">
+					<TextLine ID="P3_TL00004" HPOS="1043" VPOS="432" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00004" HPOS="1043" VPOS="432" WIDTH="8" HEIGHT="13" CONTENT="s" WC="0.24" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00006" HPOS="3133" VPOS="1151" WIDTH="22" HEIGHT="36" STYLEREFS="TXT_3 PAR_LEFT">
+					<TextLine ID="P3_TL00005" HPOS="1175" VPOS="432" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00005" HPOS="1175" VPOS="432" WIDTH="8" HEIGHT="13" CONTENT="s" WC="0.24" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00007" HPOS="3065" VPOS="1270" WIDTH="306" HEIGHT="36" STYLEREFS="TXT_4 PAR_LEFT">
+					<TextLine ID="P3_TL00006" HPOS="1149" VPOS="476" WIDTH="115" HEIGHT="14">
+						<String ID="P3_ST00006" HPOS="1149" VPOS="476" WIDTH="115" HEIGHT="14" CONTENT="mgrraiE" WC="0.44" CC="7784407"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00008" HPOS="1599" VPOS="1487" WIDTH="245" HEIGHT="271" STYLEREFS="TXT_5 PAR_LEFT">
+					<TextLine ID="P3_TL00007" HPOS="599" VPOS="615" WIDTH="70" HEIGHT="44">
+						<String ID="P3_ST00007" HPOS="599" VPOS="615" WIDTH="70" HEIGHT="44" CONTENT="W?" WC="0.17" CC="78"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00009" HPOS="2388" VPOS="1487" WIDTH="350" HEIGHT="52" STYLEREFS="TXT_6 PAR_LEFT">
+					<TextLine ID="P3_TL00008" HPOS="895" VPOS="558" WIDTH="132" HEIGHT="19">
+						<String ID="P3_ST00008" HPOS="895" VPOS="558" WIDTH="132" HEIGHT="19" CONTENT="SjiTUnix»" WC="0.33" CC="769788072"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00010" HPOS="3370" VPOS="1507" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00009" HPOS="1264" VPOS="565" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00009" HPOS="1264" VPOS="565" WIDTH="8" HEIGHT="12" CONTENT="B" WC="0.24" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00011" HPOS="2821" VPOS="1622" WIDTH="19" HEIGHT="36" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00010" HPOS="1058" VPOS="608" WIDTH="7" HEIGHT="14">
+						<String ID="P3_ST00010" HPOS="1058" VPOS="608" WIDTH="7" HEIGHT="14" CONTENT="5" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00012" HPOS="2811" VPOS="1741" WIDTH="371" HEIGHT="35" STYLEREFS="TXT_6 PAR_LEFT">
+					<TextLine ID="P3_TL00011" HPOS="1054" VPOS="653" WIDTH="139" HEIGHT="13">
+						<String ID="P3_ST00011" HPOS="1054" VPOS="653" WIDTH="139" HEIGHT="13" CONTENT="nraafriiiii" WC="0.21" CC="77789975677"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00013" HPOS="3024" VPOS="2093" WIDTH="22" HEIGHT="36" STYLEREFS="TXT_3 PAR_LEFT">
+					<TextLine ID="P3_TL00012" HPOS="1134" VPOS="785" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00012" HPOS="1134" VPOS="785" WIDTH="8" HEIGHT="13" CONTENT="s" WC="0.24" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00014" HPOS="2770" VPOS="2211" WIDTH="527" HEIGHT="36" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00013" HPOS="1039" VPOS="829" WIDTH="197" HEIGHT="14">
+						<String ID="P3_ST00013" HPOS="1039" VPOS="829" WIDTH="197" HEIGHT="14" CONTENT="«r.ii[iun»]ni[»" WC="0.35" CC="293367788678673"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00015" HPOS="3009" VPOS="2445" WIDTH="325" HEIGHT="36" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00014" HPOS="1128" VPOS="917" WIDTH="122" HEIGHT="13">
+						<String ID="P3_ST00014" HPOS="1128" VPOS="917" WIDTH="122" HEIGHT="13" CONTENT="MlTlilll^" WC="0.49" CC="457650708"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00016" HPOS="1219" VPOS="2801" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_8 PAR_LEFT">
+					<TextLine ID="P3_TL00015" HPOS="457" VPOS="1050" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00015" HPOS="457" VPOS="1050" WIDTH="8" HEIGHT="12" CONTENT="[i" WC="0.33" CC="66"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00017" HPOS="1890" VPOS="2801" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00016" HPOS="709" VPOS="1050" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00016" HPOS="709" VPOS="1050" WIDTH="8" HEIGHT="12" CONTENT="I" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00018" HPOS="2249" VPOS="2801" WIDTH="18" HEIGHT="32" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00017" HPOS="843" VPOS="1050" WIDTH="7" HEIGHT="12">
+						<String ID="P3_ST00017" HPOS="843" VPOS="1050" WIDTH="7" HEIGHT="12" CONTENT="I" WC="0.22" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00019" HPOS="2950" VPOS="2801" WIDTH="18" HEIGHT="32" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00018" HPOS="1106" VPOS="1050" WIDTH="7" HEIGHT="12">
+						<String ID="P3_ST00018" HPOS="1106" VPOS="1050" WIDTH="7" HEIGHT="12" CONTENT="S" WC="0.14" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00020" HPOS="1372" VPOS="2919" WIDTH="303" HEIGHT="32" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00019" HPOS="514" VPOS="1095" WIDTH="114" HEIGHT="12">
+						<String ID="P3_ST00019" HPOS="514" VPOS="1095" WIDTH="114" HEIGHT="12" CONTENT="WlM^«i" WC="0.29" CC="777847"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00021" HPOS="2750" VPOS="2916" WIDTH="327" HEIGHT="35" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00020" HPOS="1031" VPOS="1093" WIDTH="123" HEIGHT="14">
+						<String ID="P3_ST00020" HPOS="1031" VPOS="1093" WIDTH="123" HEIGHT="14" CONTENT="NliT*][iH«" WC="0.46" CC="8708087580"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00022" HPOS="2137" VPOS="3018" WIDTH="25" HEIGHT="52" STYLEREFS="TXT_9 PAR_LEFT">
+					<TextLine ID="P3_TL00021" HPOS="801" VPOS="1132" WIDTH="10" HEIGHT="19">
+						<String ID="P3_ST00021" HPOS="801" VPOS="1132" WIDTH="10" HEIGHT="19" CONTENT="I" WC="0.16" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00023" HPOS="2452" VPOS="3034" WIDTH="696" HEIGHT="36" STYLEREFS="TXT_1 PAR_LEFT">
+					<TextLine ID="P3_TL00022" HPOS="919" VPOS="1138" WIDTH="261" HEIGHT="13">
+						<String ID="P3_ST00022" HPOS="919" VPOS="1138" WIDTH="261" HEIGHT="13" CONTENT=":«iw*«iii)D'^iiia4«" WC="0.31" CC="9607768547738958796"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00024" HPOS="1571" VPOS="3136" WIDTH="354" HEIGHT="53" STYLEREFS="TXT_10 PAR_LEFT">
+					<TextLine ID="P3_TL00023" HPOS="589" VPOS="1176" WIDTH="133" HEIGHT="20">
+						<String ID="P3_ST00023" HPOS="589" VPOS="1176" WIDTH="133" HEIGHT="20" CONTENT="■jjiiiu»F" WC="0.37" CC="267567837"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00025" HPOS="2679" VPOS="3136" WIDTH="32" HEIGHT="53" STYLEREFS="TXT_9 PAR_LEFT">
+					<TextLine ID="P3_TL00024" HPOS="1005" VPOS="1176" WIDTH="12" HEIGHT="20">
+						<String ID="P3_ST00024" HPOS="1005" VPOS="1176" WIDTH="12" HEIGHT="20" CONTENT="I" WC="0.12" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00026" HPOS="2306" VPOS="3272" WIDTH="202" HEIGHT="32" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00025" HPOS="866" VPOS="1227" WIDTH="74" HEIGHT="12">
+						<String ID="P3_ST00025" HPOS="866" VPOS="1227" WIDTH="74" HEIGHT="12" CONTENT="•HiMi" WC="0.15" CC="88888"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00027" HPOS="3160" VPOS="3272" WIDTH="120" HEIGHT="32" STYLEREFS="TXT_1 PAR_LEFT">
+					<TextLine ID="P3_TL00026" HPOS="1185" VPOS="1227" WIDTH="45" HEIGHT="12">
+						<String ID="P3_ST00026" HPOS="1185" VPOS="1227" WIDTH="45" HEIGHT="12" CONTENT="mp" WC="0.25" CC="77"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00028" HPOS="1656" VPOS="3509" WIDTH="212" HEIGHT="32" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00027" HPOS="621" VPOS="1316" WIDTH="79" HEIGHT="12">
+						<String ID="P3_ST00027" HPOS="621" VPOS="1316" WIDTH="79" HEIGHT="12" CONTENT="•HIE" WC="0.94" CC="8777"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00029" HPOS="2591" VPOS="3509" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_3 PAR_LEFT">
+					<TextLine ID="P3_TL00028" HPOS="972" VPOS="1316" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00028" HPOS="972" VPOS="1316" WIDTH="8" HEIGHT="12" CONTENT="s" WC="0.24" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00030" HPOS="3055" VPOS="3509" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00029" HPOS="1146" VPOS="1316" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00029" HPOS="1146" VPOS="1316" WIDTH="8" HEIGHT="12" CONTENT="i" WC="0.12" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00031" HPOS="1880" VPOS="3624" WIDTH="215" HEIGHT="35" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00030" HPOS="705" VPOS="1359" WIDTH="80" HEIGHT="13">
+						<String ID="P3_ST00030" HPOS="705" VPOS="1359" WIDTH="80" HEIGHT="13" CONTENT="5H1E" WC="0.19" CC="7878"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00032" HPOS="2391" VPOS="3624" WIDTH="19" HEIGHT="35" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00031" HPOS="897" VPOS="1359" WIDTH="7" HEIGHT="13">
+						<String ID="P3_ST00031" HPOS="897" VPOS="1359" WIDTH="7" HEIGHT="13" CONTENT="I" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00033" HPOS="2818" VPOS="3624" WIDTH="218" HEIGHT="35" STYLEREFS="TXT_10 PAR_LEFT">
+					<TextLine ID="P3_TL00032" HPOS="1057" VPOS="1359" WIDTH="82" HEIGHT="13">
+						<String ID="P3_ST00032" HPOS="1057" VPOS="1359" WIDTH="82" HEIGHT="13" CONTENT="UiME" WC="0.24" CC="8775"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00034" HPOS="2719" VPOS="3742" WIDTH="398" HEIGHT="36" STYLEREFS="TXT_7 PAR_LEFT">
+					<TextLine ID="P3_TL00033" HPOS="1020" VPOS="1403" WIDTH="149" HEIGHT="14">
+						<String ID="P3_ST00033" HPOS="1020" VPOS="1403" WIDTH="149" HEIGHT="14" CONTENT="[iHlilillslg" WC="0.32" CC="677776755757"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00035" HPOS="3244" VPOS="3979" WIDTH="22" HEIGHT="33" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00034" HPOS="1217" VPOS="1492" WIDTH="8" HEIGHT="12">
+						<String ID="P3_ST00034" HPOS="1217" VPOS="1492" WIDTH="8" HEIGHT="12" CONTENT="1" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00036" HPOS="2384" VPOS="4196" WIDTH="337" HEIGHT="53" STYLEREFS="TXT_1 PAR_LEFT">
+					<TextLine ID="P3_TL00035" HPOS="894" VPOS="1574" WIDTH="126" HEIGHT="19">
+						<String ID="P3_ST00035" HPOS="894" VPOS="1574" WIDTH="126" HEIGHT="19" CONTENT="miffiMQ" WC="0.49" CC="8622257"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00037" HPOS="3136" VPOS="4213" WIDTH="22" HEIGHT="36" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00036" HPOS="1176" VPOS="1580" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00036" HPOS="1176" VPOS="1580" WIDTH="8" HEIGHT="13" CONTENT="5" WC="0.23" CC="7"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00038" HPOS="2567" VPOS="4332" WIDTH="22" HEIGHT="35" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00037" HPOS="963" VPOS="1624" WIDTH="8" HEIGHT="14">
+						<String ID="P3_ST00037" HPOS="963" VPOS="1624" WIDTH="8" HEIGHT="14" CONTENT="5" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00039" HPOS="2814" VPOS="4569" WIDTH="22" HEIGHT="32" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00038" HPOS="1055" VPOS="1713" WIDTH="9" HEIGHT="12">
+						<String ID="P3_ST00038" HPOS="1055" VPOS="1713" WIDTH="9" HEIGHT="12" CONTENT="K" WC="0.14" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00040" HPOS="3248" VPOS="4802" WIDTH="22" HEIGHT="36" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00039" HPOS="1218" VPOS="1801" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00039" HPOS="1218" VPOS="1801" WIDTH="8" HEIGHT="13" CONTENT="1" WC="0.13" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00041" HPOS="2669" VPOS="5039" WIDTH="123" HEIGHT="33" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00040" HPOS="1001" VPOS="1890" WIDTH="46" HEIGHT="12">
+						<String ID="P3_ST00040" HPOS="1001" VPOS="1890" WIDTH="46" HEIGHT="12" CONTENT="Mili" WC="0.96" CC="6540"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00042" HPOS="3106" VPOS="5039" WIDTH="18" HEIGHT="33" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00041" HPOS="1165" VPOS="1890" WIDTH="7" HEIGHT="12">
+						<String ID="P3_ST00041" HPOS="1165" VPOS="1890" WIDTH="7" HEIGHT="12" CONTENT="S" WC="0.55" CC="4"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00043" HPOS="2750" VPOS="5275" WIDTH="22" HEIGHT="34" STYLEREFS="TXT_0 PAR_LEFT">
+					<TextLine ID="P3_TL00042" HPOS="1031" VPOS="1978" WIDTH="8" HEIGHT="13">
+						<String ID="P3_ST00042" HPOS="1031" VPOS="1978" WIDTH="8" HEIGHT="13" CONTENT="I" WC="0.12" CC="8"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00044" HPOS="3075" VPOS="5375" WIDTH="283" HEIGHT="40" STYLEREFS="TXT_2 PAR_LEFT">
+					<TextLine ID="P3_TL00043" HPOS="1154" VPOS="2015" WIDTH="105" HEIGHT="16">
+						<String ID="P3_ST00043" HPOS="1154" VPOS="2015" WIDTH="105" HEIGHT="16" CONTENT="r/JdLvft" WC="0.15" CC="88887978"/>
+					</TextLine>
+				</TextBlock>
+				<TextBlock ID="P3_TB00045" HPOS="721" VPOS="6350" WIDTH="456" HEIGHT="25" STYLEREFS="TXT_11 PAR_LEFT">
+					<TextLine ID="P3_TL00044" HPOS="271" VPOS="2381" WIDTH="170" HEIGHT="10">
+						<String ID="P3_ST00044" HPOS="271" VPOS="2381" WIDTH="170" HEIGHT="10" CONTENT="&gt;iwi:wiiMnTiir«" WC="0.34" CC="977797637763572"/>
+					</TextLine>
+				</TextBlock>
+			</PrintSpace>
+		</Page>
+	</Layout>
+</alto>

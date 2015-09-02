@@ -1,7 +1,7 @@
 info:
   app:
     name: catalog-delivery-text-service
-    description: catalog-delivery-text-service
+    description: Catalog delivery text service
 
 endpoints:
   restart:
