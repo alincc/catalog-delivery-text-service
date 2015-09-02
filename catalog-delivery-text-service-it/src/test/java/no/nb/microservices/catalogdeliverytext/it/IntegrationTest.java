@@ -35,8 +35,26 @@ import java.util.Date;
 @ContextConfiguration(classes = {Application.class})
 @WebAppConfiguration
 public class IntegrationTest {
-    @Test
-    public void contextLoads() {
 
+    @Autowired
+    private WebApplicationContext context;
+
+    private MockMvc mockMvc;
+
+    @Before
+    public void setup() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
+    }
+
+    @Test
+    public void whenAltoIsFoundResponseShouldBeOk() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
+                .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
+    }
+
+    @Test
+    public void whenAltoIsNotFoundResponseShouldBeNotFound() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0060"))
+                .andExpect(MockMvcResultMatchers.status().isNotFound()).andReturn();
     }
 }
