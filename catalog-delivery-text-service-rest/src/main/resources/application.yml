@@ -1,7 +1,7 @@
 info:
   app:
     name: catalog-delivery-text-service
-    description: Catalog delivery text service
+    description: Delivers objects as text format i.e. Alto or txt
 
 endpoints:
   restart:

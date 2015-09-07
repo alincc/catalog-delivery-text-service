@@ -4,7 +4,7 @@
     <artifactId>catalog-delivery-text-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>My Microservice</description>
+    <description>Delivers objects as text format i.e. Alto or txt</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
