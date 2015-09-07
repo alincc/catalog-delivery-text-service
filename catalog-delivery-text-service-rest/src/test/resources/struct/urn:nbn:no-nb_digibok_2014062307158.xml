@@ -1,0 +1,38 @@
+<structMap xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div rightsGroupId="rg1" TYPE="COVER_PAGE" ORDER="1" ID="DIV1">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0001" resourceLevel="medium" originalName="digibok_2014062307158_0001.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="2" ID="DIV2">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0002" resourceLevel="medium" originalName="digibok_2014062307158_0002.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="TITLE_PAGE" ORDER="3" ID="DIV3">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0003" resourceLevel="medium" originalName="digibok_2014062307158_0003.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="4" ORDERLABEL="1"  ID="DIV4">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0004" resourceLevel="medium" originalName="digibok_2014062307158_0004.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="5" ORDERLABEL="2" ID="DIV5">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0005" resourceLevel="medium" originalName="digibok_2014062307158_0005.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="6" ORDERLABEL="3" ID="DIV6">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0006" resourceLevel="medium" originalName="digibok_2014062307158_0006.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="7" ORDERLABEL="4" ID="DIV7">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0007" resourceLevel="medium" originalName="digibok_2014062307158_0007.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="PAGE" ORDER="8" ORDERLABEL="5" ID="DIV8">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_0008" resourceLevel="medium" originalName="digibok_2014062307158_0008.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="COVER_FRONT" ORDER="9" ID="DIV9">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2558" HEIGHT="4392" xlink:href="URN:NBN:no-nb_digibok_2014062307158_C1" resourceLevel="medium" originalName="digibok_2014062307158_C1.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="COVER_BACK" ORDER="10" ID="DIV10">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2551" HEIGHT="4392" xlink:href="URN:NBN:no-nb_digibok_2014062307158_C3" resourceLevel="medium" originalName="digibok_2014062307158_C3.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="COVER_FRONT_INSIDE" ORDER="11" ID="DIV11">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_I1" resourceLevel="medium" originalName="digibok_2014062307158_I1.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+    <div rightsGroupId="rg1" TYPE="COVER_BACK_INSIDE" ORDER="12" ID="DIV12">
+        <resource RESOLUTIONLEVELS="6" TILESIZE="1024x1024" SCANRESOLUTION="400" WIDTH="2381" HEIGHT="4057" xlink:href="URN:NBN:no-nb_digibok_2014062307158_I3" resourceLevel="medium" originalName="digibok_2014062307158_I3.jpg" SIZE="-1" MIMETYPE="image/jpg"/>
+    </div>
+</structMap>
