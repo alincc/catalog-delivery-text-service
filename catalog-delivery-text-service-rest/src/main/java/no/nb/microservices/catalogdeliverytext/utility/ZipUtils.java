@@ -15,6 +15,8 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipUtils {
 
+    private ZipUtils() {}
+
     public static File zip(List<File> files, String path) throws IOException {
         File zipFile = new File(path + "/" + UUID.randomUUID().toString() + ".zip");
         FileOutputStream fos = new FileOutputStream(zipFile);
