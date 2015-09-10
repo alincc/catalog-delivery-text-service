@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 public class AltoTextExtractor {
 
+    private AltoTextExtractor() {}
+
     public static String extractText(Alto alto) {
         StringBuilder stringBuilder = new StringBuilder();
         for (Alto.Layout.Page page : alto.getLayout().getPage()) {
