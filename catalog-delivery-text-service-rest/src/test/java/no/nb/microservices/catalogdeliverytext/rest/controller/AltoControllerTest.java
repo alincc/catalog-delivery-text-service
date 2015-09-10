@@ -1,7 +1,6 @@
 package no.nb.microservices.catalogdeliverytext.rest.controller;
 
-import no.nb.microservices.catalogdeliverytext.core.alto.IAltoService;
-import no.nb.microservices.catalogdeliverytext.core.text.service.ITextService;
+import no.nb.microservices.catalogdeliverytext.core.alto.service.IAltoService;
 import no.nb.microservices.catalogdeliverytext.exception.AltoNotFoundException;
 import no.nb.microservices.catalogdeliverytext.model.alto.Alto;
 import org.junit.Before;
@@ -14,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.io.File;
-import java.io.IOException;
 
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
@@ -29,9 +27,6 @@ public class AltoControllerTest {
     private AltoController altoController;
 
     @Mock
-    private ITextService textService;
-
-    @Mock
     private IAltoService altoService;
 
     @Before
@@ -41,7 +36,7 @@ public class AltoControllerTest {
 
     @Test
     public void testAlto() throws Exception{
-        when(textService.getAlto("URN:NBN:no-nb_digibok_2014062307158", "URN:NBN:no-nb_digibok_2014062307158_0001")).thenReturn(new Alto());
+        when(altoService.getAlto("URN:NBN:no-nb_digibok_2014062307158", "URN:NBN:no-nb_digibok_2014062307158_0001")).thenReturn(new Alto());
         mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0001"))
                 .andExpect(status().isOk());
     }
@@ -51,14 +46,14 @@ public class AltoControllerTest {
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("5385811c-fe21-40b2-9b59-5f941df6f0bf.zip").getFile());
 
-        when(altoService.getAltos(anyString(), anyString(), anyString())).thenReturn(file);
+        when(altoService.getAltoFilesZipped(anyString(), anyString(), anyString())).thenReturn(file);
         mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_2014062307158"))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void testAltosNotFound() throws Exception {
-        when(altoService.getAltos(anyString(), anyString(), anyString())).thenThrow(new AltoNotFoundException("Not found"));
+        when(altoService.getAltoFilesZipped(anyString(), anyString(), anyString())).thenThrow(new AltoNotFoundException("Not found"));
         mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_asdjsad"))
                 .andExpect(status().isNotFound());
     }
