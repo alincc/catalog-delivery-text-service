@@ -35,8 +35,7 @@ public class AltoService implements IAltoService {
     public File getAltoFilesZipped(String urn, String pages, String pageSelection) throws IOException {
         List<String> urns = catalogMetadataService.getItemPageUrns(urn, pages, pageSelection);
         List<File> altoFiles = urns.stream().map(q -> getAltoFile(urn, q)).collect(Collectors.toList());
-        File zippedFile = ZipUtils.zip(altoFiles, "/tmp");
-        return zippedFile;
+        return ZipUtils.zip(altoFiles, "/tmp");
     }
 
     @Override
@@ -49,8 +48,7 @@ public class AltoService implements IAltoService {
             stringBuilder.append("-----");
             stringBuilder.append(System.lineSeparator());
         }
-        File zippedFile = ZipUtils.zipText(stringBuilder.toString(), "/tmp");
-        return zippedFile;
+        return ZipUtils.zipText(stringBuilder.toString(), "/tmp");
 
     }
 
@@ -69,9 +67,7 @@ public class AltoService implements IAltoService {
         if (altoString == null) {
             throw new AltoNotFoundException("");
         }
-        Alto alto = (Alto) marshaller.unmarshal(new StreamSource(new StringReader(altoString)));
-
-        return alto;
+        return (Alto) marshaller.unmarshal(new StreamSource(new StringReader(altoString)));
     }
 
     @Override
