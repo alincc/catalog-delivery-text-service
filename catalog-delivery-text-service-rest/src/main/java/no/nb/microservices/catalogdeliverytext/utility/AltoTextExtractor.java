@@ -8,7 +8,9 @@ import java.util.stream.Collectors;
 
 public class AltoTextExtractor {
 
-    private AltoTextExtractor() {}
+    private AltoTextExtractor() {
+
+    }
 
     public static String extractText(Alto alto) {
         StringBuilder stringBuilder = new StringBuilder();
