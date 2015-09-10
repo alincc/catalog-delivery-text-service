@@ -6,7 +6,6 @@ import java.util.List;
 public final class PageUtils {
 
     private PageUtils() {
-        super();
     }
 
     public static List<Integer> toPageList(String pages) {
