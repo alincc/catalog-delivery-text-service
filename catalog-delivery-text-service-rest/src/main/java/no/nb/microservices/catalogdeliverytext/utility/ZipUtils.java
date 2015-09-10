@@ -30,4 +30,19 @@ public class ZipUtils {
 
         return zipFile;
     }
+
+    public static File zipText(String text, String path) throws IOException {
+        File zipFile = new File(path + "/" + UUID.randomUUID().toString() + ".zip");
+        FileOutputStream fileOutputStream = new FileOutputStream(zipFile);
+        ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(fileOutputStream));
+        ZipEntry zipEntry = new ZipEntry("name.txt");
+        zipOutputStream.putNextEntry(zipEntry);
+
+        byte[] data = text.getBytes();
+        zipOutputStream.write(data, 0, data.length);
+        zipOutputStream.closeEntry();
+        zipOutputStream.close();
+
+        return zipFile;
+    }
 }
