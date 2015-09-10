@@ -2,6 +2,8 @@ package no.nb.microservices.catalogdeliverytext.core.alto.repository;
 
 import no.nb.microservices.catalogdeliverytext.exception.AltoNotFoundException;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
@@ -10,6 +12,7 @@ import java.net.URL;
 
 @Repository
 public class DiskAltoRepository implements AltoRepository {
+    private static final Logger LOG = LoggerFactory.getLogger(DiskAltoRepository.class);
 
     @Override
     public File getAltoFile(String urn, String pageUrn) {
@@ -30,7 +33,7 @@ public class DiskAltoRepository implements AltoRepository {
         try {
             altoString = FileUtils.readFileToString(altoFile);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("Error reading altofile", e);
         }
 
         return altoString;
