@@ -31,7 +31,7 @@ public class CatalogMetadataService implements ICatalogMetadataService {
         StructMap structMap =  catalogMetadataRepository.getStructure(id);
         List<Integer> pagesList = PageUtils.toPageList(pages);
         return structMap.getDivs().stream()
-                .filter(q -> (pagesList.isEmpty()) || ("id".equals(pageSelection) ? pagesList.contains(structMap.getDivs().indexOf(q)) : pagesList.contains(Integer.parseInt((q.getOrderLabel() != null ? q.getOrderLabel() : "-1")))))
+                .filter(q -> (pagesList.isEmpty()) || ("id".equals(pageSelection) ? pagesList.contains(Integer.parseInt(q.getOrder())) : pagesList.contains(Integer.parseInt((q.getOrderLabel() != null ? q.getOrderLabel() : "-1")))))
                 .map(q -> q.getResource().getHref())
                 .collect(Collectors.toList());
     }

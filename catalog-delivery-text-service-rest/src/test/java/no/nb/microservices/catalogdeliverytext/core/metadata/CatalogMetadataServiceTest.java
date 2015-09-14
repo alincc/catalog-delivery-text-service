@@ -58,7 +58,7 @@ public class CatalogMetadataServiceTest {
 
         List<String> urns = catalogMetadataService.getItemPageUrns(urn, "1", "id");
         assertEquals(1, urns.size());
-        assertEquals("URN:NBN:no-nb_digibok_2014062307158_0002", urns.get(0));
+        assertEquals("URN:NBN:no-nb_digibok_2014062307158_0001", urns.get(0));
 
         urns = catalogMetadataService.getItemPageUrns(urn, "", "id");
         assertEquals(12, urns.size());
