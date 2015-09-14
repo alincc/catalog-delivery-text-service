@@ -85,6 +85,11 @@
             <artifactId>catalog-metadata-model</artifactId>
             <version>0.0.1-cc221af5214dd323e8b5b6b138d33cf89c0b4698-88</version>
         </dependency>
+        <dependency>
+            <groupId>no.nb.microservices.catalogsearchindex</groupId>
+            <artifactId>catalog-search-index-model</artifactId>
+            <version>-8c813c3af8f5b81a1180f7aaeabda19568d70847-36</version>
+        </dependency>
 
         <!-- Testing -->
         <dependency>
