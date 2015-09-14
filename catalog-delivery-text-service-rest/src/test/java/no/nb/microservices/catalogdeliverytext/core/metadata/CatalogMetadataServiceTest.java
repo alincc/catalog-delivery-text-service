@@ -2,6 +2,7 @@ package no.nb.microservices.catalogdeliverytext.core.metadata;
 
 import no.nb.microservices.catalogdeliverytext.core.metadata.repository.CatalogMetadataRepository;
 import no.nb.microservices.catalogdeliverytext.core.metadata.service.CatalogMetadataService;
+import no.nb.microservices.catalogdeliverytext.core.searchindex.service.ISearchIndexService;
 import no.nb.microservices.catalogmetadata.model.struct.StructMap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +34,9 @@ public class CatalogMetadataServiceTest {
     @Mock
     CatalogMetadataRepository catalogMetadataRepository;
 
+    @Mock
+    ISearchIndexService searchIndexService;
+
     @Test
     public void getItemPageUrnsTest() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
@@ -47,17 +51,19 @@ public class CatalogMetadataServiceTest {
 
         assertNotNull(structMap);
 
-        String id = "urn:nbn:no-nb_digibok_2014062307158";
+        String urn = "urn:nbn:no-nb_digibok_2014062307158";
+        String id = "d87d999b6bca07c553089032d889cd7d";
+        when(searchIndexService.getId(urn)).thenReturn(id);
         when(catalogMetadataRepository.getStructure(eq(id))).thenReturn(structMap);
 
-        List<String> urns = catalogMetadataService.getItemPageUrns(id, "1", "id");
+        List<String> urns = catalogMetadataService.getItemPageUrns(urn, "1", "id");
         assertEquals(1, urns.size());
         assertEquals("URN:NBN:no-nb_digibok_2014062307158_0002", urns.get(0));
 
-        urns = catalogMetadataService.getItemPageUrns(id, "", "id");
+        urns = catalogMetadataService.getItemPageUrns(urn, "", "id");
         assertEquals(12, urns.size());
 
-        urns = catalogMetadataService.getItemPageUrns(id, "4,5", "label");
+        urns = catalogMetadataService.getItemPageUrns(urn, "4,5", "label");
         assertEquals(2, urns.size());
         assertEquals("URN:NBN:no-nb_digibok_2014062307158_0007", urns.get(0));
         assertEquals("URN:NBN:no-nb_digibok_2014062307158_0008", urns.get(1));
