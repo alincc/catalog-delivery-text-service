@@ -16,6 +16,7 @@ import java.util.zip.ZipOutputStream;
 public class ZipUtils {
 
     private ZipUtils() {
+
     }
 
     public static File zip(List<File> files, String path) throws IOException {
