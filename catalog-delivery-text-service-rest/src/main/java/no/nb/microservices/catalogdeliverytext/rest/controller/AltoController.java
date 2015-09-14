@@ -26,7 +26,7 @@ public class AltoController {
         this.altoService = altoService;
     }
 
-    @RequestMapping(value = "/alto/{urn}", method = RequestMethod.GET)
+    @RequestMapping(value = "/alto/{urn}", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
     public void getAltos(@PathVariable String urn,
                          @RequestParam(defaultValue = "", required = false) String pages,
                          @RequestParam(defaultValue = "id", required = false) String pageSelection,
