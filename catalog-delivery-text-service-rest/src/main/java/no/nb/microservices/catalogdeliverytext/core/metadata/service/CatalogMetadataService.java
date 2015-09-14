@@ -1,6 +1,7 @@
 package no.nb.microservices.catalogdeliverytext.core.metadata.service;
 
 import no.nb.microservices.catalogdeliverytext.core.metadata.repository.CatalogMetadataRepository;
+import no.nb.microservices.catalogdeliverytext.core.searchindex.service.ISearchIndexService;
 import no.nb.microservices.catalogdeliverytext.utility.PageUtils;
 import no.nb.microservices.catalogmetadata.model.struct.StructMap;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +17,17 @@ import java.util.stream.Collectors;
 public class CatalogMetadataService implements ICatalogMetadataService {
 
     private final CatalogMetadataRepository catalogMetadataRepository;
+    private final ISearchIndexService searchIndexService;
 
     @Autowired
-    public CatalogMetadataService(CatalogMetadataRepository catalogMetadataRepository) {
+    public CatalogMetadataService(CatalogMetadataRepository catalogMetadataRepository, ISearchIndexService searchIndexService) {
         this.catalogMetadataRepository = catalogMetadataRepository;
+        this.searchIndexService = searchIndexService;
     }
 
     @Override
-    public List<String> getItemPageUrns(String id, String pages, String pageSelection) {
+    public List<String> getItemPageUrns(String urn, String pages, String pageSelection) {
+        String id = searchIndexService.getId(urn);
         StructMap structMap =  catalogMetadataRepository.getStructure(id);
         List<Integer> pagesList = PageUtils.toPageList(pages);
         return structMap.getDivs().stream()
