@@ -1,10 +1,11 @@
 package no.nb.microservices.catalogdeliverytext.core.alto.service;
 
+import no.nb.commons.io.packaging.factory.PackageFactory;
+import no.nb.commons.io.packaging.service.ZipService;
 import no.nb.microservices.catalogdeliverytext.core.alto.repository.AltoRepository;
 import no.nb.microservices.catalogdeliverytext.core.metadata.service.ICatalogMetadataService;
 import no.nb.microservices.catalogdeliverytext.exception.AltoNotFoundException;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,12 +15,12 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
 import static junit.framework.TestCase.assertNotNull;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.when;
@@ -36,6 +37,9 @@ public class AltoServiceTest {
     @Mock
     private ICatalogMetadataService catalogMetadataService;
 
+    @Mock
+    private PackageFactory packageFactory;
+
     private IAltoService altoService;
     private Jaxb2Marshaller marshaller;
 
@@ -44,7 +48,7 @@ public class AltoServiceTest {
         marshaller = new Jaxb2Marshaller();
         marshaller.setPackagesToScan("no.nb.microservices.catalogdeliverytext.model");
 
-        altoService = new AltoService(catalogMetadataService, altoRepository, marshaller);
+        altoService = new AltoService(catalogMetadataService, altoRepository, marshaller, packageFactory);
     }
 
     @Test
@@ -53,16 +57,16 @@ public class AltoServiceTest {
         List<String> urns = Arrays.asList("digibok_2014062307158_C1", "digibok_2014062307158_I1", "digibok_2014062307158_0001");
         when(catalogMetadataService.getItemPageUrns(eq(id), eq("1-3"), eq("id"))).thenReturn(urns);
 
+        when(packageFactory.getPackageService(eq("zip"))).thenReturn(new ZipService());
+
         URL resource = getClass().getResource("/");
         String path = resource.getPath();
         when(altoRepository.getAltoFile(eq(id), eq(urns.get(0)))).thenReturn(new File(path + "/alto/" + id + "/" + urns.get(0)));
         when(altoRepository.getAltoFile(eq(id), eq(urns.get(1)))).thenReturn(new File(path + "/alto/" + id + "/" + urns.get(1)));
         when(altoRepository.getAltoFile(eq(id), eq(urns.get(2)))).thenReturn(new File(path + "/alto/" + id + "/" + urns.get(2)));
 
-        File altos = altoService.getAltoFilesZipped(id, "", "id");
+        InputStream altos = altoService.getAltoFilesZipped(id, "", "id", "zip");
         assertNotNull(altos);
-        assertEquals("zip", FilenameUtils.getExtension(altos.getPath()));
-        assertTrue(altos.length() > 0);
     }
 
     @Test
@@ -71,16 +75,16 @@ public class AltoServiceTest {
         List<String> urns = Arrays.asList("digibok_2014062307158_0002", "digibok_2014062307158_0003", "digibok_2014062307158_0004");
         when(catalogMetadataService.getItemPageUrns(eq(urn), eq("2-4"), eq("id"))).thenReturn(urns);
 
+        when(packageFactory.getPackageService(eq("zip"))).thenReturn(new ZipService());
+
         URL resource = getClass().getResource("/");
         String path = resource.getPath();
         when(altoRepository.getAltoFileAsString(eq(urn), eq(urns.get(0)))).thenReturn(FileUtils.readFileToString(new File(path + "/alto/" + urn + "/" + urns.get(0) + ".xml")));
         when(altoRepository.getAltoFileAsString(eq(urn), eq(urns.get(1)))).thenReturn(FileUtils.readFileToString(new File(path + "/alto/" + urn + "/" + urns.get(1) + ".xml")));
         when(altoRepository.getAltoFileAsString(eq(urn), eq(urns.get(2)))).thenReturn(FileUtils.readFileToString(new File(path + "/alto/" + urn + "/" + urns.get(2) + ".xml")));
 
-        File zippedFile = altoService.getAltoFilesAsTextZipped(urn, "2-4", "id");
+        InputStream zippedFile = altoService.getAltoFilesAsText(urn, "2-4", "id");
         assertNotNull(zippedFile);
-        assertEquals("zip", FilenameUtils.getExtension(zippedFile.getPath()));
-        assertTrue(zippedFile.length() > 0);
     }
 
     @Test

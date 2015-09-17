@@ -1,7 +1,5 @@
 package no.nb.microservices.catalogdeliverytext.core.alto.repository;
 
-import no.nb.microservices.catalogdeliverytext.core.alto.repository.AltoRepository;
-import no.nb.microservices.catalogdeliverytext.core.alto.repository.DiskAltoRepository;
 import no.nb.microservices.catalogdeliverytext.exception.AltoNotFoundException;
 import org.junit.Before;
 import org.junit.Test;

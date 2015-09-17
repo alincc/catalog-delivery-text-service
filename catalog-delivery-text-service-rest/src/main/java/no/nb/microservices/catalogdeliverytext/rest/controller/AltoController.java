@@ -2,6 +2,7 @@ package no.nb.microservices.catalogdeliverytext.rest.controller;
 
 import no.nb.microservices.catalogdeliverytext.core.alto.service.IAltoService;
 import no.nb.microservices.catalogdeliverytext.model.alto.Alto;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 
 @RestController
@@ -30,11 +32,14 @@ public class AltoController {
     public void getAltos(@PathVariable String urn,
                          @RequestParam(defaultValue = "", required = false) String pages,
                          @RequestParam(defaultValue = "id", required = false) String pageSelection,
+                         @RequestParam(defaultValue = "zip", required = false) String packageFormat,
                          HttpServletResponse response) throws IOException {
-        File altos = altoService.getAltoFilesZipped(urn, pages, pageSelection);
-        response.setContentType("application/zip, application/octet-stream");
-        response.setHeader("Content-Disposition", "attachment; filename=" + urn + ".zip");
-        response.getOutputStream().write(Files.readAllBytes(altos.toPath()));
+        InputStream altos = altoService.getAltoFilesZipped(urn, pages, pageSelection, packageFormat);
+        String outputFilename = urn + "." + packageFormat;
+        String contentType = Files.probeContentType(new File(outputFilename).toPath());
+        response.setContentType(contentType);
+        response.setHeader("Content-Disposition", "attachment; filename=" + outputFilename);
+        IOUtils.copy(altos, response.getOutputStream());
     }
 
     @RequestMapping(value = "/alto/{urn}/{pageUrn}", produces = MediaType.APPLICATION_XML_VALUE)
@@ -48,10 +53,12 @@ public class AltoController {
                                @RequestParam(defaultValue = "", required = false) String pages,
                                @RequestParam(defaultValue = "", required = false) String pageSelection,
                                HttpServletResponse response) throws IOException {
-        File altos = altoService.getAltoFilesAsTextZipped(urn, pages, pageSelection);
-        response.setContentType("application/zip, application/octet-stream");
-        response.setHeader("Content-Disposition", "attachment; filename=" + urn + ".zip");
-        response.getOutputStream().write(Files.readAllBytes(altos.toPath()));
+        InputStream altos = altoService.getAltoFilesAsText(urn, pages, pageSelection);
+        String outputFilename = urn + ".txt";
+        String contentType = Files.probeContentType(new File(outputFilename).toPath());
+        response.setContentType(contentType);
+        response.setHeader("Content-Disposition", "attachment; filename=" + outputFilename);
+        IOUtils.copy(altos, response.getOutputStream());
     }
 
     @RequestMapping(value = "/text/{urn}/{pageUrn}", produces = MediaType.TEXT_PLAIN_VALUE)
