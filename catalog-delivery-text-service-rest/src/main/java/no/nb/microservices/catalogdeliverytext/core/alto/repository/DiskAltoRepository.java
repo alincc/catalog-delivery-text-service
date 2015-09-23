@@ -18,7 +18,7 @@ public class DiskAltoRepository implements AltoRepository {
     public File getAltoFile(String urn, String pageUrn) {
         URL resource = getClass().getResource("/");
         String path = resource.getPath();
-        String altoPath = path + "/alto/" + urn.toLowerCase() + "/" + pageUrn.toLowerCase().replace("urn:nbn:no-nb_","") + ".xml";
+        String altoPath = path + "/alto/" + urn.toLowerCase() + "/" + pageUrn.replace("URN:NBN:no-nb_","") + ".xml";
         File alto = new File(altoPath);
         if (!alto.exists()) {
             throw new AltoNotFoundException("Alto not found");
