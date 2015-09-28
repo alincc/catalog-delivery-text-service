@@ -20,26 +20,21 @@ import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.http.client.ClientHttpRequest;
-import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.client.RequestCallback;
-import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {Application.class, RibbonClientConfiguration.class})
@@ -53,12 +48,11 @@ public class IntegrationTest {
     ILoadBalancer loadBalancer;
 
     @Autowired
-    private WebApplicationContext context;
+    WebApplicationContext context;
 
-    private MockMvc mockMvc;
-
-    private MockWebServer mockWebServer;
-    RestTemplate template = new TestRestTemplate();
+    MockMvc mockMvc;
+    MockWebServer mockWebServer;
+    RestTemplate rest = new TestRestTemplate();
 
     @Before
     public void setup() throws Exception {
@@ -66,6 +60,7 @@ public class IntegrationTest {
         String structure = IOUtils.toString(getClass().getResourceAsStream("/struct/urn_nbn_no-nb_digibok_2014062307158.xml"));
         mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
         mockWebServer = new MockWebServer();
+        rest = new TestRestTemplate();
         final Dispatcher dispatcher = new Dispatcher() {
             @Override
             public MockResponse dispatch(RecordedRequest recordedRequest) throws InterruptedException {
@@ -92,43 +87,17 @@ public class IntegrationTest {
     @Test
     public void getAltosTest() throws Exception {
         URI uri = new URI("http://localhost:" + port + "/alto/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
-        byte[] execute = new TestRestTemplate().execute(uri, HttpMethod.GET, new RequestCallback() {
-            @Override
-            public void doWithRequest(ClientHttpRequest request) throws IOException {
-                HttpHeaders headers = request.getHeaders();
-                headers.add("Accept",MediaType.APPLICATION_OCTET_STREAM_VALUE);
-            }
-        }, new ResponseExtractor<byte[]>() {
-            @Override
-            public byte[] extractData(ClientHttpResponse response) throws IOException {
-                if (!response.getStatusCode().is2xxSuccessful()) {
-                    throw new RuntimeException("Expected 200 got " + response.getStatusCode());
-                }
-                return IOUtils.toByteArray(response.getBody());
-            }
-        });
-        assertNotNull(execute);
+        ResponseEntity<ByteArrayResource> response = rest.getForEntity(uri, ByteArrayResource.class);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(933, response.getBody().contentLength());
     }
 
     @Test
     public void getAltosAsTextTest() throws Exception {
         URI uri = new URI("http://localhost:" + port + "/text/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
-        byte[] execute = new TestRestTemplate().execute(uri, HttpMethod.GET, new RequestCallback() {
-            @Override
-            public void doWithRequest(ClientHttpRequest request) throws IOException {
-                HttpHeaders headers = request.getHeaders();
-                headers.add("Accept",MediaType.APPLICATION_OCTET_STREAM_VALUE);
-            }
-        }, new ResponseExtractor<byte[]>() {
-            @Override
-            public byte[] extractData(ClientHttpResponse response) throws IOException {
-                if (!response.getStatusCode().is2xxSuccessful()) {
-                    throw new RuntimeException("Expected 200 got " + response.getStatusCode());
-                }
-                return IOUtils.toByteArray(response.getBody());
-            }
-        });
-        assertNotNull(execute);
+        ResponseEntity<ByteArrayResource> response = rest.getForEntity(uri, ByteArrayResource.class);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(7, response.getBody().contentLength());
     }
 
     @Test
@@ -148,7 +117,6 @@ public class IntegrationTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/text/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
     }
-
 }
 
 @Configuration
