@@ -39,7 +39,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {Application.class, RibbonClientConfiguration.class})
 @WebIntegrationTest("server.port: 0")
-public class IntegrationTest {
+public class AltoControllerIT {
 
     @Value("${local.server.port}")
     int port;
