@@ -18,6 +18,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 
 @RestController
+@RequestMapping("/v1")
 public class AltoController {
     private static final Logger LOG = LoggerFactory.getLogger(AltoController.class);
 

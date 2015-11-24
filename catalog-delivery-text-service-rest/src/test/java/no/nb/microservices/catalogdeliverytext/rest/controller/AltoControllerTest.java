@@ -41,7 +41,7 @@ public class AltoControllerTest {
     @Test
     public void testAlto() throws Exception{
         when(altoService.getAlto("URN:NBN:no-nb_digibok_2014062307158", "URN:NBN:no-nb_digibok_2014062307158_0001")).thenReturn(new Alto());
-        mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0001"))
+        mockMvc.perform(get("/v1/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0001"))
                 .andExpect(status().isOk());
     }
 
@@ -50,14 +50,14 @@ public class AltoControllerTest {
         ClassLoader classLoader = getClass().getClassLoader();
         InputStream inputStream = new BufferedInputStream(new FileInputStream(new File(classLoader.getResource("5385811c-fe21-40b2-9b59-5f941df6f0bf.zip").getFile())));
         when(altoService.getAltoFilesZipped(anyString(), anyString(), anyString(), eq("zip"))).thenReturn(inputStream);
-        mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_2014062307158"))
+        mockMvc.perform(get("/v1/alto/URN:NBN:no-nb_digibok_2014062307158"))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void testAltosNotFound() throws Exception {
         when(altoService.getAltoFilesZipped(anyString(), anyString(), anyString(), eq("zip"))).thenThrow(new AltoNotFoundException("Not found"));
-        mockMvc.perform(get("/alto/URN:NBN:no-nb_digibok_asdjsad"))
+        mockMvc.perform(get("/v1/alto/URN:NBN:no-nb_digibok_asdjsad"))
                 .andExpect(status().isNotFound());
     }
 

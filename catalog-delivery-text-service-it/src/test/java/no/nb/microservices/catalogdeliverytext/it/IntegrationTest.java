@@ -64,9 +64,9 @@ public class IntegrationTest {
         final Dispatcher dispatcher = new Dispatcher() {
             @Override
             public MockResponse dispatch(RecordedRequest recordedRequest) throws InterruptedException {
-                if (recordedRequest.getPath().startsWith("/search")) {
+                if (recordedRequest.getPath().startsWith("/v1/search")) {
                     return new MockResponse().setBody(searchResponse).setResponseCode(200).setHeader("Content-Type", "application/hal+json; charset=utf-8");
-                } else if (recordedRequest.getPath().equals("/catalog/metadata/d87d999b6bca07c553089032d889cd7d/struct")) {
+                } else if (recordedRequest.getPath().equals("/v1/catalog/metadata/d87d999b6bca07c553089032d889cd7d/struct")) {
                     return new MockResponse().setBody(structure).setResponseCode(200).setHeader("Content-Type", "application/xml; charset=utf-8");
                 }
                 return new MockResponse().setResponseCode(404);
@@ -86,7 +86,7 @@ public class IntegrationTest {
 
     @Test
     public void getAltosTest() throws Exception {
-        URI uri = new URI("http://localhost:" + port + "/alto/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
+        URI uri = new URI("http://localhost:" + port + "/v1/alto/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
         ResponseEntity<ByteArrayResource> response = rest.getForEntity(uri, ByteArrayResource.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(933, response.getBody().contentLength());
@@ -94,7 +94,7 @@ public class IntegrationTest {
 
     @Test
     public void getAltosAsTextTest() throws Exception {
-        URI uri = new URI("http://localhost:" + port + "/text/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
+        URI uri = new URI("http://localhost:" + port + "/v1/text/URN:NBN:no-nb_digibok_2014062307158?pages=6&pageSelection=id");
         ResponseEntity<ByteArrayResource> response = rest.getForEntity(uri, ByteArrayResource.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(7, response.getBody().contentLength());
@@ -102,19 +102,19 @@ public class IntegrationTest {
 
     @Test
     public void whenAltoIsFoundResponseShouldBeOk() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/v1/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
     }
 
     @Test
     public void whenAltoIsNotFoundResponseShouldBeNotFound() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0060"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/v1/alto/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0060"))
                 .andExpect(MockMvcResultMatchers.status().isNotFound()).andReturn();
     }
 
     @Test
     public void getTextTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/text/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/v1/text/URN:NBN:no-nb_digibok_2014062307158/URN:NBN:no-nb_digibok_2014062307158_0006"))
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
     }
 }
