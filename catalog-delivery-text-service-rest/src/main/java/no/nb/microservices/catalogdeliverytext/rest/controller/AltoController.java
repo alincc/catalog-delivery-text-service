@@ -18,7 +18,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/catalog/v1/contenttext/")
 public class AltoController {
     private static final Logger LOG = LoggerFactory.getLogger(AltoController.class);
 
