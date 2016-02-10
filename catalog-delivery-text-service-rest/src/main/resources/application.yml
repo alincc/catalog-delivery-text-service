@@ -3,31 +3,5 @@ info:
     name: catalog-delivery-text-service
     description: Delivers objects as text format i.e. Alto or txt
 
-endpoints:
-  restart:
-    enabled: true
-  refresh:
-    enabled: true
-
 server:
-  port: 8095
-
-spring:  
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
----
-spring:
-    profiles: docker
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+  port: 8080
