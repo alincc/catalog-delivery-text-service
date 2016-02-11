@@ -4,4 +4,4 @@ info:
     description: Delivers objects as text format i.e. Alto or txt
 
 server:
-  port: 8080
+  port: 0
