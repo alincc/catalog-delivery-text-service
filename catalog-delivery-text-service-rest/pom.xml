@@ -22,6 +22,24 @@
     </properties>
 
     <dependencies>
+        <!-- Microservices -->
+        <dependency>
+            <groupId>no.nb.microservices.catalogdeliverytext</groupId>
+            <artifactId>catalog-delivery-text-service-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>no.nb.microservices</groupId>
+            <artifactId>catalog-metadata-model</artifactId>
+            <version>0.0.1-153</version>
+        </dependency>
+        <dependency>
+            <groupId>no.nb.microservices.catalogsearchindex</groupId>
+            <artifactId>catalog-search-index-model</artifactId>
+            <version>0.0.1-98</version>
+        </dependency>
+
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -76,21 +94,7 @@
             <artifactId>swagger-annotations</artifactId>
             <version>1.5.3-M1</version>
         </dependency>  
-        <dependency>
-            <groupId>no.nb.microservices.catalogdeliverytext</groupId>
-            <artifactId>catalog-delivery-text-service-model</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>no.nb.microservices</groupId>
-            <artifactId>catalog-metadata-model</artifactId>
-            <version>0.0.1-cc221af5214dd323e8b5b6b138d33cf89c0b4698-88</version>
-        </dependency>
-        <dependency>
-            <groupId>no.nb.microservices.catalogsearchindex</groupId>
-            <artifactId>catalog-search-index-model</artifactId>
-            <version>-50</version>
-        </dependency>
+
 
         <!-- Utils -->
         <dependency>
@@ -144,11 +148,11 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>0.4.2</version>
                 <configuration>
                     <imageName>${docker.registry}/${docker.image.prefix}/${project.artifactId}</imageName>
                     <baseImage>java:8-jre</baseImage>
-                    <entryPoint>java $JAVA_OPTS $OTHER_OPTS -Dspring.profiles.active=docker -jar /${project.build.finalName}.jar</entryPoint>
+                    <entryPoint>java $JAVA_OPTS $OTHER_OPTS -jar /${project.build.finalName}.jar</entryPoint>
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
                         <imageTag>latest</imageTag>
