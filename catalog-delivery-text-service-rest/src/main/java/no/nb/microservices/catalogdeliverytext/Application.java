@@ -12,6 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.hateoas.config.EnableHypermediaSupport.HypermediaType;
 
+import no.nb.metrics.annotation.EnableMetrics;
+
 @SpringBootApplication
 @EnableConfigurationProperties
 @EnableDiscoveryClient
@@ -20,6 +22,7 @@ import org.springframework.hateoas.config.EnableHypermediaSupport.HypermediaType
 @EnableOAuth2Resource
 @RefreshScope
 @ComponentScan(basePackages = {"no.nb.microservices.catalogdeliverytext", "no.nb.commons"})
+@EnableMetrics
 @EnableHypermediaSupport(type= {HypermediaType.HAL})
 public class Application {
 

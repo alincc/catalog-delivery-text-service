@@ -1,7 +1,20 @@
 info:
-  app:
-    name: catalog-delivery-text-service
-    description: Delivers objects as text format i.e. Alto or txt
+    app:
+        name: catalog-delivery-text-service
+        description: Delivers objects as text format i.e. Alto or txt
+    build:
+        artifact: ${project.artifactId}
+        name: ${project.name}
+        description: ${project.description}
+        version: ${project.version}
 
 server:
-  port: 8008
+    port: 8008
+    
+zipkin:
+    collector-hostname: localhost
+    
+monitoring:
+    hostname: localhost
+    port: 2003
+    period: 1    
